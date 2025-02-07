@@ -17,8 +17,8 @@ function App() {
 
         <p>
           //notes <br />
-          i'll add all the logins to save time over-doing auth bs, just need to
-          know who wants to be able to upload.
+          <br /> i'll add all the logins to save time over-doing auth bs, just
+          need to know who wants to be able to upload.
           <br /> couldddd add headshots/pfp to the card, if aanyone has the will
           power to implement that, let me know, I'll add you a branch, same to
           anyone that wants to style this thang up a bit
