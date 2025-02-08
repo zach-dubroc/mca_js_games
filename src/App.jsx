@@ -1,14 +1,10 @@
-import { useState } from "react";
 import CardList from "../src/components/Card_list";
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <div className="temp-text">
-        <h1> mca js final projects</h1>
         <CardList />
         <p>
           * uploaded by coders that want their projects displayed <br />
@@ -16,7 +12,7 @@ function App() {
         </p>
 
         <p>
-          //notes <br />
+          //notes <br /> npm run deplpoy after commit to refresh gh-page
           <br /> i'll add all the logins to save time over-doing auth bs, just
           need to know who wants to be able to upload.
           <br /> couldddd add headshots/pfp to the card, if aanyone has the will

@@ -1,5 +1,8 @@
 import React from "react";
 import Card from "./Card";
+import Upload from "../components/Upload";
+import { useState } from "react";
+
 // temp data
 const cardData = [
   {
@@ -55,16 +58,22 @@ const cardData = [
 ];
 
 const CardList = () => {
+  const [showUpload, setShowUpload] = useState(false);
   return (
-    <div className="card-container">
-      {cardData.map((item, index) => (
-        <Card
-          key={index}
-          image={item.image}
-          description={item.description}
-          link={item.link}
-        />
-      ))}
+    <div className="card-list-container">
+      <h1>MCA JS Final Projects</h1>
+      <button onClick={() => setShowUpload(true)}>Post Your Project</button>
+      {showUpload && <Upload onClose={() => setShowUpload(false)} />}
+      <div className="card-container">
+        {cardData.map((item, index) => (
+          <Card
+            key={index}
+            image={item.image}
+            description={item.description}
+            link={item.link}
+          />
+        ))}
+      </div>
     </div>
   );
 };
