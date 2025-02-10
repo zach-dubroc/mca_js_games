@@ -25,36 +25,6 @@ const cardData = [
     description: "Description 4",
     link: "https://example.com/4",
   },
-  {
-    image: "https://via.placeholder.com/250",
-    description: "Description 5",
-    link: "https://example.com/5",
-  },
-  {
-    image: "https://via.placeholder.com/250",
-    description: "Description 5",
-    link: "https://example.com/5",
-  },
-  {
-    image: "https://via.placeholder.com/250",
-    description: "Description 5",
-    link: "https://example.com/5",
-  },
-  {
-    image: "https://via.placeholder.com/250",
-    description: "Description 5",
-    link: "https://example.com/5",
-  },
-  {
-    image: "https://via.placeholder.com/250",
-    description: "Description 5",
-    link: "https://example.com/5",
-  },
-  {
-    image: "https://via.placeholder.com/250",
-    description: "Description 5",
-    link: "https://example.com/5",
-  },
 ];
 
 const CardList = () => {

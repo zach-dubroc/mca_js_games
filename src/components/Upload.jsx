@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/Card.css";
+import axios from "axios";
 
 const Upload = ({ onClose }) => {
   const [username, setUsername] = useState("");
@@ -7,13 +8,14 @@ const Upload = ({ onClose }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [image, setImage] = useState("");
   const [description, setDescription] = useState("");
-  const [link, setLink] = useState("");
-
+  const [game_link, setGameLink] = useState("");
+  const [git_link, setGitLink] = useState("");
+  const api_url = "localhost:8000/api/user_upload";
   const handleLogin = () => {
     const [firstName] = username.split("_");
-    const expectedPassword =
-      firstName.charCodeAt(0).toString() + firstName.charCodeAt(2).toString();
-
+    const expectedPassword = "123";
+    //firstName.charCodeAt(0).toString() + firstName.charCodeAt(2).toString();
+    // pass hardcoded for testin
     if (password === expectedPassword) {
       setIsAuthenticated(true);
     } else {
@@ -21,12 +23,29 @@ const Upload = ({ onClose }) => {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log("Project submitted:", { image, description, link });
-    alert("Project uploaded successfully!");
-    onClose();
+    const formData = new FormData();
+    formData.append("image", image);
+    formData.append("description", description);
+    formData.append("game_link", game_link);
+    formData.append("git_link", git_link);
+
+    try {
+      const res = await axios.post(api_url, formData);
+      console.log(res.data);
+      console.log(res);
+      console.log("Project submitted:", {
+        image,
+        description,
+        game_link,
+        git_link,
+      });
+      onClose();
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
@@ -55,23 +74,28 @@ const Upload = ({ onClose }) => {
             <h2>Upload Your Project</h2>
             <form onSubmit={handleSubmit}>
               <input
-                type="text"
-                placeholder="Image URL"
-                value={image}
-                onChange={(e) => setImage(e.target.value)}
+                type="file"
+                onChange={(e) => setImage(e.target.files[0])}
                 required
               />
               <input
                 type="text"
-                placeholder="Description"
+                placeholder="description(255)"
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
                 required
               />
               <input
                 type="text"
-                placeholder="Project Link"
-                value={link}
+                placeholder="link to game"
+                value={game_link}
+                onChange={(e) => setLink(e.target.value)}
+                required
+              />
+              <input
+                type="text"
+                placeholder="link to github"
+                value={git_link}
                 onChange={(e) => setLink(e.target.value)}
                 required
               />
