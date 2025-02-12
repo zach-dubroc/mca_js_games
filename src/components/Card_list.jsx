@@ -7,6 +7,17 @@ function CardList() {
   const [posts, setPosts] = useState([]);
   const [showUpload, setShowUpload] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [password, setPassword] = useState("");
+  const [showPasswordPrompt, setShowPasswordPrompt] = useState(false);
+
+  const handlePasswordSubmit = () => {
+    if (password === "123") {
+      setShowUpload(true);
+      setShowPasswordPrompt(false);
+    } else {
+      alert("Incorrect password. Please try again.");
+    }
+  };
 
   const fetchPosts = () => {
     setLoading(true);
@@ -33,12 +44,25 @@ function CardList() {
 
   return (
     <div className="card-list-container">
-      <div className="upload-button">      
-        <button onClick={() => setShowUpload(true)}>
-        Post Project
+      <div className="upload-button">
+        <button onClick={() => setShowPasswordPrompt(true)}>
+          Post Project
         </button>
-        
       </div>
+
+      {showPasswordPrompt && (
+        <div className="password-prompt">
+          <h3>Enter Password</h3>
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Password"
+          />
+          <button onClick={handlePasswordSubmit}>Submit</button>
+          <button onClick={() => setShowPasswordPrompt(false)}>Cancel</button>
+        </div>
+      )}
 
       {showUpload && <Upload onClose={() => setShowUpload(false)} />}
       <h2>mca</h2>
