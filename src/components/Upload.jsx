@@ -40,7 +40,7 @@ function Upload({ onClose }) {
     formData.append("git_link", gitLink);
     formData.append("game_link", gameLink);
 
-    fetch("http://localhost:8000/upload", {
+    fetch("https://mc-api-production.up.railway.app/upload", {
       method: "POST",
       body: formData,
     })
@@ -115,7 +115,7 @@ function Upload({ onClose }) {
           </label>
           <label>
             Project Image:
-            <input type="file" onChange={handleFileChange} required />
+            <input className="upload-file-btn" type="file" onChange={handleFileChange} required />
           </label>
           {error && <p className="error">{error}</p>}
           <button type="submit" disabled={uploading}>

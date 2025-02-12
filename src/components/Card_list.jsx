@@ -10,7 +10,7 @@ function CardList() {
 
   const fetchPosts = () => {
     setLoading(true);
-    fetch("http://localhost:8000/posts")
+    fetch("https://mc-api-production.up.railway.app/posts")
       .then((res) => {
         if (!res.ok) {
           throw new Error(`HTTP error: ${res.status}`);
@@ -33,11 +33,15 @@ function CardList() {
 
   return (
     <div className="card-list-container">
-      <button className="upload-button" onClick={() => setShowUpload(true)}>
-        Post Your Project
-      </button>
+      <div className="upload-button">      
+        <button onClick={() => setShowUpload(true)}>
+        Post Project
+        </button>
+        
+      </div>
+
       {showUpload && <Upload onClose={() => setShowUpload(false)} />}
-      <h2>Your Projects</h2>
+      <h2>mca</h2>
       {loading ? (
         <div className="spinner">Loading...</div>
       ) : (

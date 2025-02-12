@@ -16,7 +16,7 @@ function Card({ post }) {
             href={post.git_link}
             target="_blank"
             rel="noopener noreferrer"
-            className="card-button"
+            className="card-button-link"
           >
             GitHub
           </a>
@@ -24,7 +24,7 @@ function Card({ post }) {
             href={post.game_link}
             target="_blank"
             rel="noopener noreferrer"
-            className="card-button"
+            className="card-button-link"
           >
             Play
           </a>
