@@ -1,128 +1,130 @@
-
+// Upload.jsx
 import React, { useState } from "react";
-import "../styles/Card.css";
+import "../styles/Upload.css";
 
-const Upload = ({ onClose }) => {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
+function Upload({ onClose }) {
   const [selectedFile, setSelectedFile] = useState(null);
+  const [fname, setFname] = useState("");
+  const [lname, setLname] = useState("");
   const [description, setDescription] = useState("");
-  const [link, setLink] = useState("");
+  const [gitLink, setGitLink] = useState("");
+  const [gameLink, setGameLink] = useState("");
+  const [uploading, setUploading] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleLogin = () => {
-    const expectedPassword = "123"
-      //firstName.charCodeAt(0).toString() + firstName.charCodeAt(2).toString();
-
-    if (password === expectedPassword) {
-      setIsAuthenticated(true);
-    } else {
-      alert("Invalid username or password");
-    }
+  const handleFileChange = (e) => {
+    setSelectedFile(e.target.files[0]);
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-
-    if (!selectedFile) {
-      alert("Please select a file to upload.");
+    if (
+      !selectedFile ||
+      !fname ||
+      !lname ||
+      !description ||
+      !gitLink ||
+      !gameLink
+    ) {
+      setError("Please fill in all fields.");
       return;
     }
-
+    setError("");
+    setUploading(true);
 
     const formData = new FormData();
     formData.append("file", selectedFile, selectedFile.name);
-    formData.append("fname", firstName);
-    formData.append("lname", lastName);
+    formData.append("fname", fname);
+    formData.append("lname", lname);
     formData.append("description", description);
-    formData.append("git_link", link);
-    formData.append("game_link", link);
+    formData.append("git_link", gitLink);
+    formData.append("game_link", gameLink);
 
-    try {
-      const response = await fetch("http://localhost:8000/upload", {
-        method: "POST",
-        body: formData,
+    fetch("http://localhost:8000/upload", {
+      method: "POST",
+      body: formData,
+    })
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(`HTTP error: ${res.status}`);
+        }
+        return res.json();
       })
-      .then((response)=> res.json())
-      .then((data)=>{
-        console.log("welp there to go the data");
-        
+      .then((data) => {
+        setUploading(false);
+        onClose();
       })
-    } catch (error) {
-      console.error("Error uploading project:", error);
-    }
+      .catch((err) => {
+        console.error("Error uploading project:", err);
+        setError("Upload failed. Please try again.");
+        setUploading(false);
+      });
   };
 
   return (
-    <div className="upload-popup">
-    <div className="upload-content">
-      {!isAuthenticated ? (
-        <>
-          <h2>Upload</h2>
-          <input
-            type="password"
-            placeholder="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <button onClick={handleLogin}>Login</button>
-          <button onClick={onClose}>Close</button>
-        </>
-      ) : (
-        <>
-          <h2>Upload Your Project</h2>
-          <form onSubmit={handleSubmit}>
-
+    <div className="modal-overlay">
+      <div className="modal">
+        <button className="modal-close" onClick={onClose}>
+          &times;
+        </button>
+        <h2>Post Your Project</h2>
+        <form className="upload-form" onSubmit={handleSubmit}>
+          <label>
+            First Name:
             <input
               type="text"
-              placeholder="First Name"
-              value={firstName}
-              onChange={(e) => setFirstName(e.target.value)}
+              value={fname}
+              onChange={(e) => setFname(e.target.value)}
               required
             />
+          </label>
+          <label>
+            Last Name:
             <input
               type="text"
-              placeholder="Last Name"
-              value={lastName}
-              onChange={(e) => setLastName(e.target.value)}
+              value={lname}
+              onChange={(e) => setLname(e.target.value)}
               required
             />
-            {/* File input for the image/file upload */}
-            <input
-              type="file"
-              onChange={(e) => {
-                if (e.target.files.length > 0) {
-                  setSelectedFile(e.target.files[0]);
-                }
-              }}
-              required
-            />
-            <input
-              type="text"
-              placeholder="Description"
+          </label>
+          <label>
+            Description:
+            <textarea
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               required
-            />
+            ></textarea>
+          </label>
+          <label>
+            GitHub Link:
             <input
-              type="text"
-              placeholder="Project Link"
-              value={link}
-              onChange={(e) => setLink(e.target.value)}
+              type="url"
+              value={gitLink}
+              onChange={(e) => setGitLink(e.target.value)}
               required
             />
-            <button type="submit">Upload</button>
-            <button type="button" onClick={onClose}>
-              Cancel
-            </button>
-          </form>
-        </>
-      )}
+          </label>
+          <label>
+            Game Link:
+            <input
+              type="url"
+              value={gameLink}
+              onChange={(e) => setGameLink(e.target.value)}
+              required
+            />
+          </label>
+          <label>
+            Project Image:
+            <input type="file" onChange={handleFileChange} required />
+          </label>
+          {error && <p className="error">{error}</p>}
+          <button type="submit" disabled={uploading}>
+            {uploading ? "Uploading..." : "Upload"}
+          </button>
+        </form>
+      </div>
     </div>
-  </div>
   );
-};
+}
 
 export default Upload;

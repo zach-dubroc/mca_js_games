@@ -1,51 +1,54 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Card from "./Card";
-import Upload from "../components/Upload";
-import { useState } from "react";
+import Upload from "./Upload";
+import "../styles/Card.css";
 
-// temp data
-const cardData = [
-  {
-    image: "https://via.placeholder.com/250",
-    description: "Description 1",
-    link: "https://example.com/1",
-  },
-  {
-    image: "https://via.placeholder.com/250",
-    description: "Description 2",
-    link: "https://example.com/2",
-  },
-  {
-    image: "https://via.placeholder.com/250",
-    description: "Description 3",
-    link: "https://example.com/3",
-  },
-  {
-    image: "https://via.placeholder.com/250",
-    description: "Description 4",
-    link: "https://example.com/4",
-  },
-];
-
-const CardList = () => {
+function CardList() {
+  const [posts, setPosts] = useState([]);
   const [showUpload, setShowUpload] = useState(false);
+  const [loading, setLoading] = useState(true);
+
+  const fetchPosts = () => {
+    setLoading(true);
+    fetch("http://localhost:8000/posts")
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(`HTTP error: ${res.status}`);
+        }
+        return res.json();
+      })
+      .then((data) => {
+        setPosts(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error fetching posts:", error);
+        setLoading(false);
+      });
+  };
+
+  useEffect(() => {
+    fetchPosts();
+  }, [showUpload]);
+
   return (
     <div className="card-list-container">
-      <h1>MCA JS Final Projects</h1>
-      <button onClick={() => setShowUpload(true)}>Post Your Project</button>
+      <button className="upload-button" onClick={() => setShowUpload(true)}>
+        Post Your Project
+      </button>
       {showUpload && <Upload onClose={() => setShowUpload(false)} />}
-      <div className="card-container">
-        {cardData.map((item, index) => (
-          <Card
-            key={index}
-            image={item.image}
-            description={item.description}
-            link={item.link}
-          />
-        ))}
-      </div>
+      <h2>Your Projects</h2>
+      {loading ? (
+        <div className="spinner">Loading...</div>
+      ) : (
+        <div className="card-grid">
+          {posts.map((post) => (
+            <Card key={post.id} post={post} />
+          ))}
+        </div>
+      )}
     </div>
   );
-};
+}
 
 export default CardList;

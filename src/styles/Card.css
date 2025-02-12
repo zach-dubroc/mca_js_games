@@ -1,12 +1,16 @@
+.card-grid {
+  display: inline-block;
+}
+
 .card {
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 16px;
-  text-align: center;
+  text-align: left;
   width: 250px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
   margin: 10px;
-  overflow: hidden;
+  overflow: auto;
   position: relative;
 }
 
