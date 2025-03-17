@@ -8,9 +8,13 @@ function Card({ post }) {
       <img className="card-image" src={post.image_url} alt={post.image_title} />
       <div className="card-content">
         <h3>
-          {post.fname} {post.lname}
+          {/* {post.fname} {post.lname} */}
+          {/* HEADER */}
         </h3>
-        <p>{post.description}</p>
+        <p>
+          {/* {post.description} */}
+            {/* DESCRIPTION */}
+        </p>
         <div className="card-buttons">
           <a
             href={post.git_link}

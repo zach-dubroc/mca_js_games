@@ -50,7 +50,7 @@ function CardList() {
         </button>
       </div>
 
-      {showPasswordPrompt && (
+      {/* {showPasswordPrompt && (
         <div className="password-prompt">
           <h3>Enter Password</h3>
           <input
@@ -64,7 +64,7 @@ function CardList() {
         </div>
       )}
 
-      {showUpload && <Upload onClose={() => setShowUpload(false)} />}
+      {showUpload && <Upload onClose={() => setShowUpload(false)} />} */}
       <h2>mca</h2>
       {loading ? (
         <div className="spinner">Loading...</div>
