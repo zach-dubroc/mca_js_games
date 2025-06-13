@@ -21,6 +21,7 @@ function CardList() {
 
   const fetchPosts = () => {
     setLoading(true);
+    //need to pull this from env instead
     fetch("https://mc-api-production.up.railway.app/posts")
       .then((res) => {
         if (!res.ok) {
