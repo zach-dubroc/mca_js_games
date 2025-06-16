@@ -12,6 +12,8 @@ function Upload({ onClose }) {
   const [uploading, setUploading] = useState(false);
   const [error, setError] = useState("");
 
+  const API_URL = import.meta.env.VITE_BASE_URL
+
   const handleFileChange = (e) => {
     setSelectedFile(e.target.files[0]);
   };
@@ -39,8 +41,9 @@ function Upload({ onClose }) {
     formData.append("description", description);
     formData.append("git_link", gitLink);
     formData.append("game_link", gameLink);
-
-    fetch("https://mc-api-production.up.railway.app/upload", {
+//todo
+// add to env keep local
+    fetch(`${API_URL}/upload`, {
       method: "POST",
       body: formData,
     })

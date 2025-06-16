@@ -10,19 +10,22 @@ function CardList() {
   const [password, setPassword] = useState("");
   const [showPasswordPrompt, setShowPasswordPrompt] = useState(false);
 
+  const API_URL = import.meta.env.VITE_BASE_URL
+  const PASSWORD = import.meta.env.PASSWORD
+
   const handlePasswordSubmit = () => {
     if (password === "123") {
       setShowUpload(true);
       setShowPasswordPrompt(false);
     } else {
-      alert("Incorrect password. Please try again.");
+      alert("invalid.");
     }
   };
 
   const fetchPosts = () => {
     setLoading(true);
     //need to pull this from env instead
-    fetch("https://mc-api-production.up.railway.app/posts")
+    fetch(`${API_URL}/posts`)
       .then((res) => {
         if (!res.ok) {
           throw new Error(`HTTP error: ${res.status}`);
@@ -34,7 +37,6 @@ function CardList() {
         setLoading(false);
       })
       .catch((error) => {
-        console.error("Error fetching posts:", error);
         setLoading(false);
       });
   };
