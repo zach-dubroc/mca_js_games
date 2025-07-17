@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import postsData from "../posts_temp.json";
 import Card from "./Card";
 import Upload from "./Upload";
 import "../styles/Card.css";
@@ -10,11 +11,10 @@ function CardList() {
   const [password, setPassword] = useState("");
   const [showPasswordPrompt, setShowPasswordPrompt] = useState(false);
 
-  const API_URL = import.meta.env.VITE_BASE_URL
   const PASSWORD = import.meta.env.PASSWORD
-
+//not today but one day
   const handlePasswordSubmit = () => {
-    if (password === "123") {
+    if (password === "321") {
       setShowUpload(true);
       setShowPasswordPrompt(false);
     } else {
@@ -24,21 +24,25 @@ function CardList() {
 
   const fetchPosts = () => {
     setLoading(true);
-    //need to pull this from env instead
-    fetch(`${API_URL}/posts`)
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error(`HTTP error: ${res.status}`);
-        }
-        return res.json();
-      })
-      .then((data) => {
-        setPosts(data);
-        setLoading(false);
-      })
-      .catch((error) => {
-        setLoading(false);
-      });
+    // Fetch from API (commented out for now)
+    // fetch(`${API_URL}/posts`)
+    //   .then((res) => {
+    //     if (!res.ok) {
+    //       throw new Error(`HTTP error: ${res.status}`);
+    //     }
+    //     return res.json();
+    //   })
+    //   .then((data) => {
+    //     setPosts(data);
+    //     setLoading(false);
+    //   })
+    //   .catch((error) => {
+    //     setLoading(false);
+    //   });
+    // api usage while submitting^
+    // posts per group get moved to local json when group submission ends
+    setPosts(postsData);
+    setLoading(false);
   };
 
   useEffect(() => {
@@ -66,7 +70,6 @@ function CardList() {
           <button onClick={() => setShowPasswordPrompt(false)}>Cancel</button>
         </div>
       )}
-
       {showUpload && <Upload onClose={() => setShowUpload(false)} />}
       <h2>mca</h2>
       {loading ? (
@@ -81,5 +84,4 @@ function CardList() {
     </div>
   );
 }
-
 export default CardList;

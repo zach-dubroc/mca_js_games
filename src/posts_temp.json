@@ -1,0 +1,262 @@
+[
+    {
+        "id": 36,
+        "fname": "SUSAN",
+        "lname": "WINDHAM",
+        "description": "WHACK A MONSTER",
+        "image_title": "Screenshot 2025-06-24 000058.png",
+        "image_url": "https://zvd-uploads.s3.amazonaws.com/Screenshot 2025-06-24 000058.png",
+        "git_link": "https://github.com/7windhams/Whack-Monsters.git",
+        "game_link": " https://7windhams.github.io/Whack-Monsters/"
+    },
+    {
+        "id": 35,
+        "fname": "Kayla",
+        "lname": "Nosser",
+        "description": "Just a simple tech demo for level connection and walking controls",
+        "image_title": "Ghost Dun 1-1.png.png",
+        "image_url": "https://zvd-uploads.s3.amazonaws.com/Ghost Dun 1-1.png.png",
+        "git_link": "https://github.com/KNosser877/Kurt-s-First-Game",
+        "game_link": "file:///C:/Users/kayno/OneDrive/Documents/GitHub/Kurt-s-First-Game/index.html"
+    },
+    {
+        "id": 34,
+        "fname": "Macey",
+        "lname": "Nowell",
+        "description": "advanced battleship project",
+        "image_title": "Screenshot_23-6-2025_13337_.jpeg",
+        "image_url": "https://zvd-uploads.s3.amazonaws.com/Screenshot_23-6-2025_13337_.jpeg",
+        "git_link": "https://github.com/MaceyN08/Javascript-Project",
+        "game_link": "file:///C:/Users/Fairy/OneDrive/Documents/GitHub/Javascript-Project/index.html"
+    },
+    {
+        "id": 33,
+        "fname": "Nathan",
+        "lname": "Drieling",
+        "description": "A tic tac toe game where you start as the O player",
+        "image_title": "image_2025-06-20_121814565.png",
+        "image_url": "https://zvd-uploads.s3.amazonaws.com/image_2025-06-20_121814565.png",
+        "git_link": "https://github.com/Nathan-Drieling/MSCoding-Tic-Tac-Toe-Program",
+        "game_link": "https://nathan-drieling.github.io/MSCoding-Tic-Tac-Toe-Program/"
+    },
+    {
+        "id": 32,
+        "fname": "John",
+        "lname": "Astvazaturov",
+        "description": "JavaScript Blackjack (work in progress but fully playable): Fully playable with splits. Correct cards and sums show. Visuals still need work.",
+        "image_title": "blackJackGame.png",
+        "image_url": "https://zvd-uploads.s3.amazonaws.com/blackJackGame.png",
+        "git_link": "https://github.com/jpa1994/JavaScript-Browser-Game-Project--Blackjack",
+        "game_link": "https://jpa1994.github.io/JavaScript-Browser-Game-Project--Blackjack/"
+    },
+    {
+        "id": 31,
+        "fname": "Seth",
+        "lname": "Sargent",
+        "description": "A 2D platformer with a vampiric, gothic, and pixel-art stylized atmosphere. Traverse your way amongst platforms while collecting all vials of blood to open and exit through the portal.",
+        "image_title": "Screenshot 2025-06-18 at 12.08.05 PM.png",
+        "image_url": "https://zvd-uploads.s3.amazonaws.com/Screenshot 2025-06-18 at 12.08.05 PM.png",
+        "git_link": "https://github.com/xsethsargentx/JS-Game-Final-Project",
+        "game_link": "https://xsethsargentx.github.io/JS-Game-Final-Project/html/index.html"
+    },
+    {
+        "id": 30,
+        "fname": "Dana",
+        "lname": "Reynolds",
+        "description": "Javascript Project",
+        "image_title": "Screenshot 2025-06-13 223822.png",
+        "image_url": "https://zvd-uploads.s3.amazonaws.com/Screenshot 2025-06-13 223822.png",
+        "git_link": "https://github.com/Danareynolds-coding/BJ-Blackjack-Project",
+        "game_link": "https://danareynolds-coding.github.io/BJ-Blackjack-Project/"
+    },
+    {
+        "id": 29,
+        "fname": "Asia",
+        "lname": "Brown-Haller",
+        "description": "“Who ate my sandwich?!” Is a classic game of ‘who done it’ with a modern twist. \r\n\r\nIt’s lunchtime in the office and your Roast Beef sandwich is gone! Six of your coworkers were there at the time, and this time you will get to the bottom of it!  Ask your coworkers questions, sniff out the thief! Make sure you’ve got the right suspect, or HR won’t be happy!",
+        "image_title": "IMG_0412.jpeg",
+        "image_url": "https://zvd-uploads.s3.amazonaws.com/IMG_0412.jpeg",
+        "git_link": "https://github.com/StudiousCorgi/WhoAteMySandwich",
+        "game_link": "https://studiouscorgi.github.io/WhoAteMySandwich/"
+    },
+    {
+        "id": 28,
+        "fname": "Natasha",
+        "lname": "Evelyn",
+        "description": "Rock, Paper, Scissors with a twist! Rack up as many points as possible before the timer runs out. Maybe you might run into the secret card? ",
+        "image_title": "RPS main menu.png",
+        "image_url": "https://zvd-uploads.s3.amazonaws.com/RPS main menu.png",
+        "git_link": "https://github.com/NatashaEvelyn90/Javascript-Project--RPS",
+        "game_link": "https://natashaevelyn90.github.io/Javascript-Project--RPS/"
+    },
+    {
+        "id": 26,
+        "fname": "Pati",
+        "lname": "Skiba",
+        "description": "A pokemon battle simulator using PokeAPI. Defeat Charmander!",
+        "image_title": "pokemonsim.png",
+        "image_url": "https://zvd-uploads.s3.amazonaws.com/pokemonsim.png",
+        "git_link": "https://github.com/patiskiba/pokemon-battle-simulator",
+        "game_link": "https://patiskiba.github.io/pokemon-battle-simulator/"
+    },
+    {
+        "id": 25,
+        "fname": "Joshua",
+        "lname": "Daley",
+        "description": "A simple game of tic tac toe",
+        "image_title": "Screenshot 2025-06-18 095105.png",
+        "image_url": "https://zvd-uploads.s3.amazonaws.com/Screenshot 2025-06-18 095105.png",
+        "git_link": "https://github.com/JDee1994/Tic-Tac-Toe-project",
+        "game_link": "https://jdee1994.github.io/Tic-Tac-Toe-project/"
+    },
+    {
+        "id": 24,
+        "fname": "Joshua",
+        "lname": "Burke",
+        "description": "Browser-based endless runner inspired by classics like Canabalt (or the dinosaur game 🦖)",
+        "image_title": "Firefly_A perfectly clear afternoon sky overlooking new Orleans 11433.jpg",
+        "image_url": "https://zvd-uploads.s3.amazonaws.com/Firefly_A perfectly clear afternoon sky overlooking new Orleans 11433.jpg",
+        "git_link": "https://github.com/jtbmca/Javascript-Project-Codename-Avalanche",
+        "game_link": "https://jtbmca.github.io/Javascript-Project-Codename-Avalanche/"
+    },
+    {
+        "id": 23,
+        "fname": "Tyler",
+        "lname": "Sawyer",
+        "description": "Top-down shooter game",
+        "image_title": "Screenshot 2025-06-17 095210.png",
+        "image_url": "https://zvd-uploads.s3.amazonaws.com/Screenshot 2025-06-17 095210.png",
+        "git_link": "https://github.com/tsawyermca/js-shooter-game-project",
+        "game_link": "https://tsawyermca.github.io/js-shooter-game-project/"
+    },
+    {
+        "id": 22,
+        "fname": "Gabrielle",
+        "lname": "Pittman",
+        "description": "A simple JavaScript Memory Game called Pelmanism",
+        "image_title": "Screenshot 2025-06-17 095823.png",
+        "image_url": "https://zvd-uploads.s3.amazonaws.com/Screenshot 2025-06-17 095823.png",
+        "git_link": "https://github.com/gabbyp30/Memory-Card-Game.git",
+        "game_link": "https://gabbyp30.github.io/Memory-Card-Game/"
+    },
+    {
+        "id": 21,
+        "fname": "Terrell",
+        "lname": "Alves",
+        "description": "A game of Tic Tac Toe",
+        "image_title": "Screenshot 2025-06-17 094919.png",
+        "image_url": "https://zvd-uploads.s3.amazonaws.com/Screenshot 2025-06-17 094919.png",
+        "git_link": "https://github.com/Talves21/Tic-Tac-Toe-Second-Project",
+        "game_link": "https://talves21.github.io/Tic-Tac-Toe-Second-Project/"
+    },
+    {
+        "id": 20,
+        "fname": "Simon",
+        "lname": "Jongo",
+        "description": "Rolling dice game, which permit 2 players to play and roll the dice 3 time, adding up each roll and give the result with the one with highest sum of 3 dice rolled.",
+        "image_title": "Screenshot 2025-06-17 095410.png",
+        "image_url": "https://zvd-uploads.s3.amazonaws.com/Screenshot 2025-06-17 095410.png",
+        "git_link": "https://github.com/JongoSimon/Random-Number",
+        "game_link": "https://jongosimon.github.io/Random-Number/"
+    },
+    {
+        "id": 19,
+        "fname": "Kolbie",
+        "lname": "Livingston",
+        "description": "Classic Simon game but with internet meme sounds instead of boring beeps.",
+        "image_title": "Screenshot 2025-06-17 094934.png",
+        "image_url": "https://zvd-uploads.s3.amazonaws.com/Screenshot 2025-06-17 094934.png",
+        "git_link": "https://github.com/livingstonkolbie/Meme-Simon",
+        "game_link": "https://livingstonkolbie.github.io/Meme-Simon/"
+    },
+    {
+        "id": 18,
+        "fname": "Jack",
+        "lname": "Badeaux",
+        "description": "Turn Based Battle simulator",
+        "image_title": "Screenshot 2025-06-12 111725.png",
+        "image_url": "https://zvd-uploads.s3.amazonaws.com/Screenshot 2025-06-12 111725.png",
+        "git_link": "https://github.com/JackBadeaux/js-game",
+        "game_link": "https://jackbadeaux.github.io/js-game/"
+    },
+    {
+        "id": 17,
+        "fname": "Everett ",
+        "lname": "Sones",
+        "description": "A lovecraftian themed, specialized Baccarat. ",
+        "image_title": "Screenshot 2025-06-17 095007.png",
+        "image_url": "https://zvd-uploads.s3.amazonaws.com/Screenshot 2025-06-17 095007.png",
+        "git_link": "https://github.com/SonesMScoding/TheLastHandInCarcosa",
+        "game_link": "https://sonesmscoding.github.io/TheLastHandInCarcosa/baccarat.html"
+    },
+    {
+        "id": 16,
+        "fname": "Trey",
+        "lname": "Farner",
+        "description": "Battleship game",
+        "image_title": "Screenshot 2025-06-16 150252.png",
+        "image_url": "https://zvd-uploads.s3.amazonaws.com/Screenshot 2025-06-16 150252.png",
+        "git_link": "https://github.com/Trey-Farner/Battleship-V2",
+        "game_link": "https://trey-farner.github.io/Battleship-V2/"
+    },
+    {
+        "id": 11,
+        "fname": "Caleb",
+        "lname": "Straily",
+        "description": "A Browser version of the pikmin game!",
+        "image_title": "Screenshot 2025-02-22 080346.png",
+        "image_url": "https://zvd-uploads.s3.amazonaws.com/Screenshot 2025-02-22 080346.png",
+        "git_link": "https://github.com/CalebStraily",
+        "game_link": "https://calebstraily.github.io/JS_Game/"
+    },
+    {
+        "id": 10,
+        "fname": "Sam",
+        "lname": "Brown",
+        "description": "A rock paper scissor game!",
+        "image_title": "Screenshot 2025-02-22 080245.png",
+        "image_url": "https://zvd-uploads.s3.amazonaws.com/Screenshot 2025-02-22 080245.png",
+        "git_link": "https://github.com/SamBrownCoding",
+        "game_link": "https://sambrowncoding.github.io/Rock-Paper-Scissor-Game/"
+    },
+    {
+        "id": 9,
+        "fname": "Hieu",
+        "lname": "Khong",
+        "description": "A Unlucky Dungeon rouge-like where everything is random!",
+        "image_title": "Screenshot 2025-02-22 075625.png",
+        "image_url": "https://zvd-uploads.s3.amazonaws.com/Screenshot 2025-02-22 075625.png",
+        "git_link": "https://github.com/HieuHKhong",
+        "game_link": "https://hieuhkhong.github.io/Game_Unlucky_Labyrinth/#"
+    },
+    {
+        "id": 8,
+        "fname": "Mike",
+        "lname": "Bain",
+        "description": "A Amazing Roulette Game!",
+        "image_title": "Screenshot 2025-02-22 075025.png",
+        "image_url": "https://zvd-uploads.s3.amazonaws.com/Screenshot 2025-02-22 075025.png",
+        "git_link": "https://github.com/Mikebain2387",
+        "game_link": "https://mikebain2387.github.io/RouletteGame/"
+    },
+    {
+        "id": 6,
+        "fname": "Margarito",
+        "lname": "Valencia",
+        "description": "This is my gameeeeeee",
+        "image_title": "Screenshot 2025-02-12 110642.png",
+        "image_url": "https://zvd-uploads.s3.amazonaws.com/Screenshot 2025-02-12 110642.png",
+        "git_link": "https://github.com/MValenciaIII",
+        "game_link": "https://mvalenciaiii.github.io/project_rpg/rpgmenu.html"
+    },
+    {
+        "id": 2,
+        "fname": "zach",
+        "lname": "dubroc",
+        "description": "this dot com",
+        "image_title": "mca_js.jpg",
+        "image_url": "https://zvd-uploads.s3.amazonaws.com/mca_js.jpg",
+        "git_link": "https://github.com/zach-dubroc",
+        "game_link": "https://zach-dubroc.github.io/mca_js_games/"
+    }
+]
