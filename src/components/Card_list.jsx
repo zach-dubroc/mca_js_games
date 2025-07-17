@@ -24,7 +24,6 @@ function CardList() {
 
   const fetchPosts = () => {
     setLoading(true);
-    // Fetch from API (commented out for now)
     // fetch(`${API_URL}/posts`)
     //   .then((res) => {
     //     if (!res.ok) {
